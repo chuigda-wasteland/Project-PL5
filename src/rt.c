@@ -127,6 +127,7 @@ void mscm_gc_mark(mscm_runtime *rt, mscm_value value) {
 
     value->gc_mark = true;
     managed_value *queue_node = malloc(sizeof(managed_value));
+    if (!queue_node) return;
     queue_node->next = NULL;
     queue_node->value = value;
     if (!rt->value_queue) {
