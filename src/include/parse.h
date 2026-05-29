@@ -3,6 +3,6 @@
 
 #include "syntax.h"
 
-mscm_syntax_node mscm_parse(char const *content, char const *file);
+mscm_syntax_node mscm_parse(char const *file, char const *content);
 
 #endif /* MINI_SCHEME_PARSE_H */
